@@ -1,0 +1,47 @@
+<div class="todo_item">
+  <form
+    action="/api/taskchanges"
+    method="POST"
+    class="btn_form"
+    enctype="application/x-www-form-urlencoded"
+  >
+    <input type="hidden" name="id" value="{{this.id}}" />
+    <input type="hidden" name="task" value="{{this.task}}" />
+    <input type="hidden" name="method" value="PUT" />
+    <button type="submit" id="{{this.id}}" class="finished_btn">
+      <img
+        src="/assets/img/check-mark-svgrepo-com.svg"
+        alt="a checkmark"
+      /></button>
+  </form>
+  <form
+    action="/api/taskchanges"
+    method="POST"
+    class="btn_form change_form"
+    enctype="application/x-www-form-urlencoded"
+  >
+    <input name="newTask" value="{{this.task}}" />
+    <input type="hidden" name="id" value="{{this.id}}" />
+    <input type="hidden" name="task" value="{{this.task}}" />
+    <input type="hidden" name="method" value="PATCH" />
+    <button type="submit" class="change_task"><img
+        src="/assets/img/write-svgrepo-com.svg"
+        alt="an img to indicate the possibility to change the task"
+      /></button>
+  </form>
+
+  <form
+    action="/api/taskchanges"
+    method="POST"
+    class="btn_form"
+    enctype="application/x-www-form-urlencoded"
+  >
+    <input type="hidden" name="id" value="{{this.id}}" />
+    <input type="hidden" name="task" value="{{this.task}}" />
+    <input type="hidden" name="method" value="DELETE" />
+    <button class="remove_btn"><img
+        src="/assets/img/trashcan-svgrepo-com.svg"
+        alt="a trashcan for deleting the task"
+      /></button>
+  </form>
+</div>

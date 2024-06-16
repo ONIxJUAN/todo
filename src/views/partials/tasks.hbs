@@ -1,0 +1,23 @@
+<article>
+  <h2>We've got things to do!</h2>
+  <form action="/api/addtask" method="POST" class="add-task_form">
+    <input type="text" name="task" placeholder="What is your task?" />
+    <button type="submit" class="add-task_btn"><h1>+</h1></button>
+  </form>
+  <div class="container-column">
+  {{#each this.todoTasks}}
+      {{> todotasks this}}
+  {{/each}}
+  </div>
+
+  <div class="container-column">
+    {{#each this.finishedTasks}}
+      {{#checkIfExists}}
+        <h2>Tasks you've completed!</h2>
+      {{/checkIfExists}}
+        {{> finishedTasks this}}
+    {{/each}}
+    {{#blockTriggeredToFalse}}
+    {{/blockTriggeredToFalse}}
+  </div>
+</article>

@@ -1,0 +1,30 @@
+<section class="auth-container register">
+  <h4>Register</h4>
+  {{#if flash.message}}
+    <div class="alert {{ flash.type}}">
+        {{ flash.message}}
+    </div>
+  {{/if}}
+  <form action="/api/register" method="POST">
+    {{#each inputs}}
+      {{>form this}}
+    {{/each}}
+    <div class="input-container">
+      <label for="role">Bevoegd als</label>
+      <select name="role" id="roles">
+        {{#each roles}}
+          <option value="{{ id }}">{{ name }}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="footer-container">
+      <div class="footer-container-left">
+        <button type="submit">Register</button>
+      </div>
+      <div class="footer-container-right">
+        <input type="reset" class="btn btn-tertiary" value="Clear">
+        <a href="/login">Naar login...</a>
+      </div>
+    </div>
+  </form>
+</section>

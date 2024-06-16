@@ -1,0 +1,233 @@
+@import url("reset.css");
+
+body {
+  background-color: black;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: hsl(0, 0%, 20%);
+  border-bottom: hsl(0, 0%, 60%) solid 0.0625rem;
+}
+
+header img {
+  width: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.container_sp-between {
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.container-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: hsl(0, 0%, 20%);
+  border-right: hsl(0, 0%, 60%) solid 0.0625rem;
+  width: 15rem;
+  height: 100vh;
+}
+
+aside img {
+  width: 1.5rem;
+}
+
+aside div.container_al-center {
+  align-items: center;
+}
+
+aside div.container.container_sb-between {
+  padding: 1rem;
+}
+
+aside p {
+  font-size: 1.5rem;
+}
+
+aside p:hover {
+  cursor: pointer;
+}
+
+.categories {
+  padding: 0.5rem 0.2rem;
+  width: 100%;
+}
+
+.change-categories_form {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.categories {
+  margin-bottom: 0;
+}
+
+aside .container {
+  gap: 0;
+}
+
+form.change-categories_form input {
+  max-width: 80%;
+}
+
+form.change-categories_form button {
+  width: 20%;
+}
+
+.categories:hover {
+  background-color: hsl(249, 16%, 17%);
+  color: hsl(251, 35%, 42%);
+}
+
+.active {
+  background-color: hsl(249, 16%, 17%);
+  color: hsl(251, 35%, 42%);
+}
+
+article {
+  background-color: hsl(0, 0%, 10%);
+  width: calc(100% - 15rem);
+}
+
+form {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+form.add-task_form input {
+  width: 93%;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+form.add-task_form .add-task_btn,
+.add-category_btn {
+  background-color: hsl(252, 78%, 58%);
+  width: 5%;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: white;
+}
+
+.add-category_btn {
+  width: 10%;
+}
+
+.btn_form {
+  width: 5%;
+  display: flex;
+}
+
+.change_form {
+  width: 80%;
+  display: flex;
+}
+
+.change_form input {
+  width: 95%;
+}
+
+.change_form button {
+  width: 5%;
+}
+
+.todo_item {
+  width: 95%;
+  display: flex;
+  margin-left: 3rem;
+  flex-direction: row;
+}
+
+.finished_item form {
+  display: flex;
+}
+
+.finished_item form input {
+  width: 88%;
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.finished_item form button {
+  width: 5%;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.finished_btn {
+  background-color: hsl(108, 39%, 41%);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.remove_btn {
+  background-color: hsl(0, 53%, 44%);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.change_task {
+  background-color: hsl(252, 78%, 58%);
+}
+
+article h2 {
+  padding: 2rem 0 1rem 3rem;
+}
+
+.finished_text {
+  width: 88%;
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  margin-left: 3rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.finished_item {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+}
+
+.finished_item .remove_btn {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.error {
+  color: hsl(0, 100%, 50%);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.transparent_btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+aside.container-column_sp-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

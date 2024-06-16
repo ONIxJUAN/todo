@@ -1,0 +1,15 @@
+const tableName = "TABLENAME";
+
+const seed = async function (knex) {
+  // Deletes ALL existing entries
+  await knex(tableName).del();
+  await knex(tableName).insert([
+    { id: 1, task: "finish this project", finished: 0 },
+    { id: 2, task: "Make dinner", finished: 0 },
+    { id: 3, task: "Walk the dog", finished: 0 },
+    { id: 4, task: "iets", finished: 1 },
+    { id: 5, task: "sleep", finished: 0 },
+  ]);
+};
+
+export { seed };

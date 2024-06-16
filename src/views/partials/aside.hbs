@@ -1,0 +1,65 @@
+<aside class="container-column_sp-between">
+  <div>
+
+    <div class="container container_sp-between">
+      <h3>Categories</h3>
+    </div>
+    <div class="container-column">
+      {{#each this}}
+        {{#if this.active}}
+          <div class="container categories active">
+
+            <form
+              action="/api/catchanges"
+              method="POST"
+              class="change-categories_form"
+            >
+              <input type="hidden" name="oldCat" value="{{this.categorie}}" />
+              <input type="hidden" name="id" value="{{this.id}}" />
+              <input type="hidden" name="method" value="PUT" />
+              <input type="text" name="newCat" value="{{this.categorie}}" />
+              <button type="submit" class="change_task"><img
+                  src="/assets/img/write-svgrepo-com.svg"
+                  alt="an img to indicate the possibility to change the task"
+                /></button>
+            </form>
+
+            <form action="/api/catchanges" method="POST">
+              <input type="hidden" name="id" value="{{this.id}}" />
+              <input type="hidden" name="method" value="DELETE" />
+              <button class="remove_btn"><img
+                  src="/assets/img/trashcan-svgrepo-com.svg"
+                  alt="a trashcan for deleting the task"
+                /></button>
+            </form>
+          </div>
+
+        {{else}}
+          <form action="/api/catchanges" method="POST" class="categories">
+            <input type="hidden" name="id" value="{{this.id}}" />
+            <input type="hidden" name="method" value="PATCH" />
+            <button
+              class="transparent_btn"
+              type="submit"
+            >{{this.categorie}}</button>
+          </form>
+        {{/if}}
+      {{/each}}
+
+      <form action="/api/addcat" method="POST">
+        <input type="text" name="categorie" placeholder="Add category" />
+        <button class=" add-category_btn" type="submit">+</button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <div class="container container_al-center">
+      <form action="/api/sendmail" method="POST">
+        <input type="text" name="email" placeholder="target email adress"/>
+        <button class="transparent_btn">
+          <img src="/assets/img/mail-plus-svgrepo-com.svg" alt="image to indicate that when u press it u can mail all tasks in that category"></p>
+        </button>
+      </form>
+    </div>
+  </div>
+</aside>
